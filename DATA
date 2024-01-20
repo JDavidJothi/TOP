@@ -1,0 +1,155 @@
+
+
+
+
+
+---------------------------------------------------------------------------------------
+SELECT * FROM employees;
+
+CREATE TABLE auto_Employees(ID INT, Name VARCHAR2(50),Attendance_Mark VARCHAR2(50));
+
+INSERT INTO auto_Employees VALUES(1,'Murali','P');
+
+SELECT * FROM auto_Employees;
+
+CREATE TABLE customer
+(
+cust_id number(8),
+cust_name VARCHAR2(100),
+mobile NUMBER(10),
+dob DATE,
+city VARCHAR2(100),
+email_id VARCHAR2(100)
+)
+
+SELECT * FROM customer;
+
+desc customer;
+
+--------------------------------------------------------------------------------------
+
+SELECT * FROM tblPerson;
+
+UPDATE tblPerson SET AGE = 26 WHERE ID = 1;
+
+SELECT * FROM tblPerson;
+
+UPDATE tblPerson SET AGE = 27 WHERE ID = 2;
+UPDATE tblPerson SET AGE = 28 WHERE ID = 3;
+UPDATE tblPerson SET AGE = 29 WHERE ID = 4;
+UPDATE tblPerson SET AGE = 30 WHERE ID = 5;
+
+SELECT * FROM tblPerson;
+
+ALTER TABLE tblPerson ADD City VARCHAR(250);
+
+SELECT * FROM tblPerson;
+
+UPDATE tblPerson SET City = 'London' WHERE ID = 1;
+UPDATE tblPerson SET City = 'New York' WHERE ID = 2;
+UPDATE tblPerson SET City = 'Sydney' WHERE ID = 3;
+UPDATE tblPerson SET City = 'London' WHERE ID = 4;
+UPDATE tblPerson SET City = 'San Fransisco' WHERE ID = 5;
+UPDATE tblPerson SET City = 'Alaska' WHERE ID = 6;
+UPDATE tblPerson SET City = 'Miami' WHERE ID = 7;
+UPDATE tblPerson SET City = 'Florida' WHERE ID = 8;
+UPDATE tblPerson SET City = 'California' WHERE ID = 9;
+
+SELECT * FROM tblPerson;
+
+SELECT * FROM tblPerson;
+
+USE [Sample]
+GO
+
+SELECT [ID]
+      ,[Name]
+      ,[Email]
+      ,[GenderId]
+      ,[AGE]
+      ,[City]
+  FROM [dbo].[tblPerson]
+
+GO
+
+SELECT DISTINCT City FROM tblPerson;
+
+SELECT [ID]
+      ,[Name]
+      ,[Email]
+      ,[GenderId]
+      ,[AGE]
+      ,[City]
+  FROM [dbo].[tblPerson]
+
+GO
+
+SELECT DISTINCT Name, City FROM tblPerson;
+
+SELECT [ID]
+      ,[Name]
+      ,[Email]
+      ,[GenderId]
+      ,[AGE]
+      ,[City]
+  FROM [dbo].[tblPerson]
+
+GO
+
+SELECT * FROM tblPerson WHERE City = 'London';
+
+SELECT * FROM tblPerson WHERE City <> 'London';
+
+SELECT * FROM tblPerson WHERE City != 'London';
+
+SELECT * FROM tblPerson;
+
+SELECT * FROM tblPerson WHERE Age = 26 OR Age = 27 OR Age = 28;
+
+SELECT * FROM tblPerson WHERE Age IN(26,27,28);
+
+SELECT * FROM tblPerson WHERE Age BETWEEN 26 AND 28;
+
+SELECT * FROM tblPerson;
+
+SELECT * FROM tblPerson WHERE City LIKE 'L%';
+
+SELECT * FROM tblPerson;
+
+SELECT * FROM tblPerson WHERE Email LIKE '%@%';
+
+SELECT * FROM tblPerson WHERE Email NOT LIKE '%@%';
+
+SELECT * FROM tblPerson WHERE Email LIKE '_@_.com';
+
+SELECT * FROM tblPerson WHERE Name LIKE '[DSR]%';
+
+SELECT * FROM tblPerson WHERE Name LIKE '[^DSR]%';
+
+SELECT * FROM tblPerson;
+
+SELECT * FROM tblPerson WHERE (City = 'London' OR City = 'Alaska') AND Age > 9;
+
+SELECT * FROM tblPerson;
+
+SELECT * FROM tblPerson ORDER BY Name;
+
+SELECT * FROM tblPerson ORDER BY Name DESC;
+
+SELECT * FROM tblPerson ORDER BY Name DESC, Age ASC;
+
+SELECT * FROM tblPerson;
+
+SELECT TOP 2 * FROM tblPerson;
+
+SELECT TOP 2 Name, Age FROM tblPerson;
+
+SELECT TOP 1 PERCENT * FROM tblPerson;
+
+SELECT TOP 50 PERCENT * FROM tblPerson;
+
+SELECT * FROM tblPerson;
+
+SELECT * FROM tblPerson ORDER BY Age DESC;
+
+SELECT TOP 1 * FROM tblPerson ORDER BY Age DESC;
